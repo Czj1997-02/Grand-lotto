@@ -59,8 +59,9 @@ def TWO():
     #read().decode("utf-8")
 def ding(text):
     from dingtalkchatbot.chatbot import DingtalkChatbot
-    webhook = 'https://oapi.dingtalk.com/robot/send?access_token=040c02bb8c6acba8707280e6cfee223fef6307242ec02b875bfc850cbcfe1ff8'
+    webhook = '这里放钉钉的token这里放钉钉的token这里放钉钉的token这里放钉钉的token'
     xiaoding = DingtalkChatbot(webhook)
+    #前置信息可以包含在钉钉上设置的关键词，我这里是大家好
     news='大家好！\n以下是今天的体彩预测：\n'+str(text)
     xiaoding.send_text(msg=news, is_at_all=True)
     print('进程结束：'+datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
